@@ -7,11 +7,29 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ProjectWindows\AddCharacter.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProjectWindows\CharactersSelectionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProjectWindows\FightWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProjectWindows\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ProjectWindows\AddCharacter.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProjectWindows\CharactersSelectionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProjectWindows\FightWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ProjectWindows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Image x:Name="Character1Img" Margin="1,107,457,142"></Image>
+        <Image x:Name="Character2Img"  Margin="458,107,0,142"/>
+        <Button x:Name="SlelecPlayer1Btn" Margin="0,342,525,28" Click="SlelecPlayerBtn_Click">Slelect player 1</Button>
+        <Button x:Name="SlelecPlayer2Btn" Margin="525,342,0,28" Click="SlelecPlayerBtn_Click">Slelect player 2</Button>
+        <Button x:Name="AddCharachterBtn" Margin="651,0,0,370" Click="AddCCharacterBtn_Click"> add charachter </Button>
+        <Button x:Name="FightBtn" Margin="326,342,325,28" Click="FightBtn_Click" > Fight!</Button>
+
     </Grid>
 </Window>

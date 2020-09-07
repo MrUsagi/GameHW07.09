@@ -21,5 +21,26 @@ namespace Game.ProjectWindows
         {
             InitializeComponent();
         }
+
+        private void SlelecPlayerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CharactersSelectionWindow window = new CharactersSelectionWindow();
+            this.Close();
+            window.Show();
+        }
+
+        private void FightBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FightWindow window = new FightWindow();
+            this.Close();
+            window.Show();
+        }
+
+        private void AddCCharacterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddCharacterWindow window = new AddCharacterWindow();
+            this.Close();
+            window.Show();
+        }
     }
 }
