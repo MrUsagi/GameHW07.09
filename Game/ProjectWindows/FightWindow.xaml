@@ -11,8 +11,9 @@
         <Image Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg" Margin="0,-4,641,224"></Image>
         <Image Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg" Margin="641,-4,0,224"></Image>
         <TextBlock ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,265,10,72" Foreground="#FFFF6464"> Fight started:</TextBlock>
-        <Button Margin="0,417,684,0" Name="Player1Atack" >Atac!</Button>
-        <Button Margin="684,417,0,0" x:Name="Player1Atack_Copy" IsEnabled="False" Content="Atac!"/>
-        
+        <Button Margin="0,417,684,0" Name="Player1Atack" >Atack!</Button>
+        <Button Margin="684,417,0,0" x:Name="Player2Atack" IsEnabled="False" Content="Atack!"/>
+        <ProgressBar Value="90" Margin="0,229,641,222" Foreground="#FFDE0619"></ProgressBar>
+        <ProgressBar Value="90" Margin="641,226,0,225" Foreground="#FFDE0619"/>
     </Grid>
 </Window>
