@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,9 @@ namespace Game.ProjectWindows
         public FightWindow()
         {
             InitializeComponent();
+            SoundPlayer player = new SoundPlayer();
+            player.SoundLocation = @"../Resources/Mortal Kombat.wav";
+            player.Play();
         }
     }
 }

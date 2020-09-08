@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "2+46O+/YlhX71cXGEpnNP6fEix0xzqSGmwEUUiRGMG+Bcu8dtdwu7dR0HhNcafHj5L6VNsY/6LFyn6nYn0Hmtw==",
+  "dgSpecHash": "D4jWCdswcvkGrIlh5f7kQ8tccTG16oFvzhJeJ77vNaSf42tNL3B0QJZe2RKgPHiRD1xwbEt1qaEr/a3uJbCJ1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Артем\\Desktop\\GameHW07.09\\GameHW07.09\\Game\\Game.csproj",
+  "projectFilePath": "C:\\Users\\Student\\Desktop\\GameHW07.09\\Game\\Game.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Student\\Desktop\\GameHW07.09\\Game\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
