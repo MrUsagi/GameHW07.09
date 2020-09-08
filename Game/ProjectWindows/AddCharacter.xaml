@@ -7,17 +7,22 @@
         mc:Ignorable="d"
         Title="AddCharacter" Height="487" Width="598">
     <Grid >
-
         <Image Margin="299,2,29,271" Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg"></Image>
         <Button Margin="10,73,450,334" FontSize="18" FontFamily="Algerian" Background="{x:Null}">Add photo</Button>
         <Label Margin="10,216,463,200" FontSize="18" FontFamily="Algerian">Name</Label>
         <TextBox Margin="180,221,10,193"></TextBox>
-        <Label Margin="10,272,463,143" FontSize="18" FontFamily="Algerian" Content="Strength"/>
-        <TextBox Margin="180,278,10,137"/>
-        <Label Margin="10,328,463,88" FontSize="18" FontFamily="Algerian" Content="Agility"/>
-        <TextBox Margin="180,334,10,86"/>
-        <Label Margin="10,384,463,31" FontSize="18" FontFamily="Algerian" Content="Vitality"/>
-        <TextBox Margin="180,385,10,38"/>
-        <Button Margin="503,433,16,3" FontSize="18" FontFamily="Algerian" Background="{x:Null}" Content="ok"/>
+        <Label Margin="10,272,463,143" FontSize="18" FontFamily="Algerian" Content="damage"/>
+        <TextBox Margin="180,278,299,137"/>
+        <Label Margin="10,328,418,88" FontSize="18" FontFamily="Algerian" Content="%crit Chance"/>
+        <TextBox Margin="180,334,299,86"/>
+        <Label Margin="10,384,440,31" FontSize="18" FontFamily="Algerian" Content="%crit Power"/>
+        <TextBox Margin="180,385,299,38"/>
+        <Button Margin="503,422,16,3" FontSize="18" FontFamily="Algerian" Background="{x:Null}" Content="ok"/>
+        <Label Margin="299,269,117,146" FontSize="18" FontFamily="Algerian" Content="%Evasion Chance"/>
+        <Label Margin="299,325,166,91" FontSize="18" FontFamily="Algerian" Content="%armor"/>
+        <Label Margin="299,381,166,34" FontSize="18" FontFamily="Algerian" Content="HP"/>
+        <TextBox Margin="469,278,10,137"/>
+        <TextBox Margin="469,334,10,86"/>
+        <TextBox Margin="469,385,10,38"/>
     </Grid>
 </Window>

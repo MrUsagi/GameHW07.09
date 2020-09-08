@@ -53,7 +53,7 @@ namespace Game.ProjectWindows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Game;V1.0.0.0;component/projectwindows/charactersselectionwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Game;component/projectwindows/charactersselectionwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ProjectWindows\CharactersSelectionWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

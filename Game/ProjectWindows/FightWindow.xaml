@@ -10,9 +10,13 @@
         <Image Source="https://chto-eto-takoe.ru/uryaimg/f4842dcb685d490e2a43212b8072a6fe.png" Margin="388,8,388,197"></Image>
         <Image x:Name="Player1Img"  Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg" Margin="0,-4,641,224"></Image>
         <Image x:Name="Player2Img" Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg" Margin="641,-4,0,224"></Image>
-        <TextBlock ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,265,0,63" Foreground="#FF008106"> Fight started:</TextBlock>
+        <Label Name="Hero1HpLb" Margin="359,223,505,215"></Label>
+        <ScrollViewer x:Name="ScrollViewer" Margin="0,263,0,63">
+            <TextBlock Name="BattleLogTb"  Foreground="#FF008106"> Fight started:</TextBlock>
+        </ScrollViewer>
         <Button Margin="320,417,320,0" Name="NextTurnBtn" Click="NextTurnBtn_Click" >Next turn</Button>
-        <ProgressBar Value="90" Margin="0,226,641,222" Foreground="#FFDE0619"></ProgressBar>
-        <ProgressBar Value="90" Margin="641,226,0,225" Foreground="#FFDE0619"/>
+        <ProgressBar x:Name="Hero1Pb" Margin="0,226,641,215" Foreground="#FFDE0619"></ProgressBar>
+        <ProgressBar x:Name="Hero2Pb" Margin="641,226,0,215" Foreground="#FFDE0619"/>
+        <Label x:Name="Hero2HpLb" Margin="495,222,359,215"></Label>
     </Grid>
 </Window>
