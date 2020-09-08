@@ -25,5 +25,10 @@ namespace Game.ProjectWindows
             player.SoundLocation = @"../Resources/Mortal Kombat.wav";
             player.Play();
         }
+
+        private void NextTurnBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
