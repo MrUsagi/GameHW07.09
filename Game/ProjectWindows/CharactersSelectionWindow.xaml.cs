@@ -21,5 +21,19 @@ namespace Game.ProjectWindows
         {
             InitializeComponent();
         }
+
+        private void GoBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            this.Close();
+            window.Show();
+        }
+
+        private void AddCharacterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddCharacterWindow window = new AddCharacterWindow();
+            this.Close();
+            window.Show();
+        }
     }
 }

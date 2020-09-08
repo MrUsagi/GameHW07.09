@@ -36,7 +36,7 @@ namespace Game.ProjectWindows
             window.Show();
         }
 
-        private void AddCCharacterBtn_Click(object sender, RoutedEventArgs e)
+        private void AddCharacterBtn_Click(object sender, RoutedEventArgs e)
         {
             AddCharacterWindow window = new AddCharacterWindow();
             this.Close();

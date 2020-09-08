@@ -7,14 +7,21 @@
         mc:Ignorable="d"
         Title="CharactersSelectionWindow" Height="900" Width="900">
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Label Margin="370,0,136,834" FontSize="20" FontFamily="Goudy Stout" Foreground="#FFF122AF">Select character</Label>
+        <Button Margin="0,0,606,825" Background="#FF818181" Click="GoBack_Click">←Back</Button>
+        <Button Click="AddCharacterBtn_Click" Margin="832,0,19,831" RenderTransformOrigin="0.5,0.5">
+            <StackPanel >
+                <Image Source="http://images.gofreedownload.net/plus-sign-clip-art-6217.jpg" />
+            </StackPanel>
+        </Button>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,46,0,0">
             <WrapPanel Width="900" Height="900">
-                <Button Width="300" Height="300"> </Button>
-                <Button Width="300" Height="300"> </Button>
-                <Button Width="300" Height="300"> </Button>
-                <Button Width="300" Height="300"> </Button>
-                <Button Width="300" Height="300"> </Button>
-                <Button Width="300" Height="300"> </Button>
+                <Button Width="300" Height="300"></Button>
+                <Button Width="300" Height="300"></Button>
+                <Button Width="300" Height="300"></Button>
+                <Button Width="300" Height="300"></Button>
+                <Button Width="300" Height="300"></Button>
+                <Button Width="300" Height="300"></Button>
             </WrapPanel>
         </ScrollViewer>
     </Grid>

@@ -13,7 +13,7 @@
         <TextBlock ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,265,10,72" Foreground="#FF008106"> Fight started:</TextBlock>
         <Button Margin="0,417,684,0" Name="Player1Atack" >Atack!</Button>
         <Button Margin="684,417,0,0" x:Name="Player2Atack" IsEnabled="False" Content="Atack!"/>
-        <ProgressBar Value="90" Margin="0,229,641,222" Foreground="#FFDE0619"></ProgressBar>
+        <ProgressBar Value="90" Margin="0,226,641,222" Foreground="#FFDE0619"></ProgressBar>
         <ProgressBar Value="90" Margin="641,226,0,225" Foreground="#FFDE0619"/>
     </Grid>
 </Window>
