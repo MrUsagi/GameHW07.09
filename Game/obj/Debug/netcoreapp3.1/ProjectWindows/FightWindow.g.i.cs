@@ -85,7 +85,7 @@ namespace Game.ProjectWindows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Game;component/projectwindows/fightwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Game;V1.0.0.0;component/projectwindows/fightwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ProjectWindows\FightWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
