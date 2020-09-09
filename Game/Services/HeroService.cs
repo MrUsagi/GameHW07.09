@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Game.DataLayer.Models;
+using Game.DataLayer.Repository.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,30 +17,35 @@ namespace Game.Services
             this.heroRepository = heroRepository;
         }
 
-        public async Task<IQueryable<Hero>> GetHeroesAsync()
+        public async Task<IReadOnlyCollection<Hero>> GetHeroesAsync()
         {
-            return await heroRepository.GetAll();
+            return await heroRepository.GetAllAsync();
         }
 
-        public async Task<Hero> GetHeroAsync(long id)
+        public async Task<Hero> GetHeroAsync(int id)
         {
-            return await heroRepository.GetById(id);
+            var hero = await heroRepository.FindByConditionAsync(x => x.Id == id);
+            return hero.FirstOrDefault();
         }
 
-        public async Task InsertHeroAsync(Hero hero)
-        {
-            await heroRepository.Insert(hero);
-        }
+        /////////Comment because useless functional
 
-        public async Task UpdateHeroAsync(Hero hero)
-        {
-            await heroRepository.Update(hero);
-        }
+        //public async Task InsertHeroAsync(Hero hero)
+        //{
+        //    await heroRepository.Insert(hero);
+        //}
 
-        public async Task DeleteHeroAsync(Hero hero)
-        {
-            await heroRepository.Delete(hero);
-        }
+        //public async Task UpdateHeroAsync(Hero hero)
+        //{
+        //    await heroRepository.Update(hero);
+        //}
+
+        //public async Task DeleteHeroAsync(Hero hero)
+        //{
+        //    await heroRepository.Delete(hero);
+        //}
+
+        ////////////////End Comment
 
     }
 }

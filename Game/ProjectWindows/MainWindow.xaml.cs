@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Game.BuisnessLogic;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,30 +19,53 @@ namespace Game.ProjectWindows
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly MainWindowService _service;
+        public MainWindow(MainWindowService service)
         {
             InitializeComponent();
+            _service = service;
         }
 
-        private void SlelecPlayerBtn_Click(object sender, RoutedEventArgs e)
+        private void SlelecPlayerBtn1_Click(object sender, RoutedEventArgs e)
         {
-            CharactersSelectionWindow window = new CharactersSelectionWindow();
-            this.Close();
-            window.Show();
+            
+            CharactersSelectionWindow window = App.ServiceProvider.GetRequiredService<CharactersSelectionWindow>();
+            //this.Close();
+            window.ShowDialog();
+            if(window.SelectedHero != null)
+            {
+                BattleClass.Attacker = window.SelectedHero;
+            }
+        }
+        private void SlelecPlayerBtn2_Click(object sender, RoutedEventArgs e)
+        {
+
+            CharactersSelectionWindow window = App.ServiceProvider.GetRequiredService<CharactersSelectionWindow>();
+            //this.Close();
+            window.ShowDialog();
+            if (window.SelectedHero != null)
+            {
+                BattleClass.Defender = window.SelectedHero;
+            }
         }
 
         private void FightBtn_Click(object sender, RoutedEventArgs e)
         {
-            FightWindow window = new FightWindow();
-            this.Close();
+            FightWindow window = App.ServiceProvider.GetRequiredService<FightWindow>();
+            //this.Close();
             window.Show();
         }
 
         private void AddCharacterBtn_Click(object sender, RoutedEventArgs e)
         {
-            AddCharacterWindow window = new AddCharacterWindow();
-            this.Close();
+            AddCharacterWindow window = App.ServiceProvider.GetRequiredService<AddCharacterWindow>();
+            //this.Close();
             window.Show();
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            await _service.CheckFighters(FightBtn);
         }
     }
 }
