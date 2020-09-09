@@ -46,7 +46,12 @@ namespace Game
                 return ataker.name + " win";
 
             blockedDamage = lastSendDamage - lastTakenDamage;
-            return ataker.name + " send " + lastSendDamage + " damage\n" + defender.name + " got " + lastTakenDamage + " damage (" + blockedDamage + " blocked)\n";
+            if (lastTakenDamage==0)
+                return ataker.name + " MISS " + lastSendDamage + " damage\n" 
+                    + defender.name + " <= " + lastTakenDamage + " damage (" + blockedDamage + " blocked)\n";
+
+            return ataker.name + " => " + lastSendDamage + " damage\n"
+                + defender.name + " <= " + lastTakenDamage + " damage (" + blockedDamage + " blocked)\n";
 
         }
 

@@ -41,11 +41,16 @@ namespace Game.ProjectWindows
         private void NextTurnBtn_Click(object sender, RoutedEventArgs e)
         {
             BattleClass battleClass = new BattleClass();
-            BattleLogTb.Text += battleClass.BattleFunction(firstHero,secondHero);
+            BattleLogTb.Text += battleClass.BattleFunction(firstHero, secondHero);
             Hero1HpLb.Content = Math.Round(firstHero.hp, MidpointRounding.ToEven);
             Hero2HpLb.Content = Math.Round(secondHero.hp, MidpointRounding.ToEven);
             Hero1Pb.Value = firstHero.hp;
             Hero2Pb.Value = secondHero.hp;
+
+            if (firstHero.hp < 0 || secondHero.hp < 0)
+            {
+                NextTurnBtn.IsEnabled = false;
+            }// furn of the next btn
             ScrollViewer.ScrollToBottom();
         }
     }
