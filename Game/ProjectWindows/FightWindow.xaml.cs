@@ -1,5 +1,4 @@
-﻿using Game.DataLayer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Media;
 using System.Reflection.Metadata.Ecma335;
@@ -21,18 +20,18 @@ namespace Game.ProjectWindows
     public partial class FightWindow : Window
     {
         public bool switcher { get; set; }
-        //Hero firstHero = new Hero()
-        //{ BasicDamage = 10, CritChance = 25, CritPower = 110, Hp = 150, Name = "Gayman", Protection = 35, Vortex = 10 };//Test heroes
-        //                                                                                                                // ЭТО НАДО УДАЛИТЬ!!! yt afrn
-        //Hero secondHero = new Hero()
-        //{ BasicDamage = 15, CritChance = 50, CritPower = 230, Hp = 80, Name = "Vovaman", Protection = 10, Vortex = 25 };//Test heroes
+        Hero firstHero = new Hero()
+        { basicDamage = 10, critChance = 25, critPower = 110, hp = 150, name = "Gayman", protection = 35, vortex = 10 };//Test heroes
+                                                                                                                        // ЭТО НАДО УДАЛИТЬ!!! yt afrn
+        Hero secondHero = new Hero()
+        { basicDamage = 15, critChance = 50, critPower = 230, hp = 80, name = "Vovaman", protection = 10, vortex = 25 };//Test heroes
 
         public FightWindow()
         {
             InitializeComponent();
 
-            Hero1Pb.Maximum = BattleClass.Attacker.Hp;
-            Hero2Pb.Maximum = BattleClass.Defender.Hp;
+            Hero1Pb.Maximum = firstHero.hp;
+            Hero2Pb.Maximum = secondHero.hp;
             SoundPlayer player = new SoundPlayer();
             player.SoundLocation = @"../Resources/Mortal Kombat.wav";
             player.Play();
@@ -42,11 +41,16 @@ namespace Game.ProjectWindows
         private void NextTurnBtn_Click(object sender, RoutedEventArgs e)
         {
             BattleClass battleClass = new BattleClass();
-            BattleLogTb.Text += battleClass.BattleFunction();
-            Hero1HpLb.Content = Math.Round(BattleClass.Attacker.Hp, MidpointRounding.ToEven);
-            Hero2HpLb.Content = Math.Round(BattleClass.Defender.Hp, MidpointRounding.ToEven);
-            Hero1Pb.Value = BattleClass.Attacker.Hp;
-            Hero2Pb.Value = BattleClass.Defender.Hp;
+            BattleLogTb.Text += battleClass.BattleFunction(firstHero, secondHero);
+            Hero1HpLb.Content = Math.Round(firstHero.hp, MidpointRounding.ToEven);
+            Hero2HpLb.Content = Math.Round(secondHero.hp, MidpointRounding.ToEven);
+            Hero1Pb.Value = firstHero.hp;
+            Hero2Pb.Value = secondHero.hp;
+
+            if (firstHero.hp < 0 || secondHero.hp < 0)
+            {
+                NextTurnBtn.IsEnabled = false;
+            }// furn of the next btn
             ScrollViewer.ScrollToBottom();
         }
     }
