@@ -57,7 +57,7 @@ namespace Game.BuisnessLogic
                 {
                     if (item is TextBox box)
                     {
-                        if (box.BorderBrush == Brushes.Red)
+                        if (box.BorderBrush == Brushes.Red || box.Text==string.Empty)
                         {
                             validation = false;
                         }

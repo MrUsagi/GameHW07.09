@@ -34,11 +34,13 @@ namespace Game.ProjectWindows
             this.Close();
         }
 
-        private void AddCharacterBtn_Click(object sender, RoutedEventArgs e)
+        private async void AddCharacterBtn_Click(object sender, RoutedEventArgs e)
         {
             AddCharacterWindow window = App.ServiceProvider.GetRequiredService<AddCharacterWindow>();
             //this.Close();
-            window.Show();
+            window.ShowDialog();
+            Window_Loaded(sender, e);
+            //await _service.LoadHeroes(mainPanel);
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)

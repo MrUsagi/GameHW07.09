@@ -20,6 +20,7 @@ namespace Game.BuisnessLogic
         }
         public async Task LoadHeroes(WrapPanel mainPanel)
         {
+            mainPanel.Children.Clear();
             var collection = await _repository.GetAllAsync();
             foreach(var item in collection)
             {
