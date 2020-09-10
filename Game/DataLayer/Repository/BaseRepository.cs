@@ -22,6 +22,7 @@ namespace Game.DataLayer.Repository
         public virtual async Task CreateAsync(TEntity entity)
         {
             await Entities.AddAsync(entity).ConfigureAwait(false);
+            await _context.SaveChangesAsync();
         }
 
         public virtual async Task<IReadOnlyCollection<TEntity>> FindByConditionAsync(Expression<Func<TEntity, bool>> predicat)

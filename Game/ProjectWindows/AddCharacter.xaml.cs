@@ -33,7 +33,7 @@ namespace Game.ProjectWindows
 
         private async void Box_KeyUp(object sender, KeyEventArgs e)
         {
-            if(sender is TextBox box)
+            if (sender is TextBox box)
             {
                 if (!await _service.Validation(box.Text))
                 {
@@ -46,7 +46,7 @@ namespace Game.ProjectWindows
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            await _service.CheckData(saveBtn,mainGrid);
+            _service.CheckData(saveBtn, mainGrid);
         }
     }
 }

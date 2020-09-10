@@ -37,7 +37,7 @@ namespace Game.BuisnessLogic
         {
             return double.TryParse(text, out var res);
         }
-        public async Task CheckData(Button btn, Panel panel)
+        public void CheckData(Button btn, Panel panel)
         {
             btnToCheck = btn;
             gridToCheck = panel;
@@ -50,7 +50,6 @@ namespace Game.BuisnessLogic
 
         private void Check(object sender, ElapsedEventArgs e)
         {
-
             gridToCheck.Dispatcher.Invoke(() =>
             {
                 var validation = false;
