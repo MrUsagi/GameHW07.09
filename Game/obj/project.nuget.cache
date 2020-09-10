@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6EO9MyUKWVMJk0D0wOulVTGuyFQQCNc6xH88i9es0pnLFF2ashc3t+b0YrU6ImNgjFovkzWYBGY1rdPMm+ZWJg==",
+  "dgSpecHash": "D79nj0qpKd27BsfG3rdCB86zPMGNvZPv0ezsUy1A0cQhd2yIBx/m7lvJj8Miw4qCw7+NM5zj2zWe2JeqWPmuJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Student\\Desktop\\GameHW07.09\\Game\\Game.csproj",
+  "projectFilePath": "C:\\Users\\Student\\Documents\\Новая папка\\GameHW07.09\\Game\\Game.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Student\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Student\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -40,7 +40,7 @@ namespace Game.BuisnessLogic
 
         public async Task<Hero> PickHero(object content)
         {
-            var hero = await _repository.FindByConditionAsync(x => x.Name == content.ToString());
+            var hero = await _repository.FindByConditionAsync(x => x.ImageURL == (content as Image).Source.ToString());
             return hero.FirstOrDefault();
         }
     }
