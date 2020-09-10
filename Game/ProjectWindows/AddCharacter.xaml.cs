@@ -27,7 +27,7 @@ namespace Game.ProjectWindows
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            await _service.AddHero(nameBox.Text, damageBox.Text, critChanceBox.Text, critPowerBox.Text, dodgeChanceBox.Text, armorBox.Text, hpBox.Text);
+            await _service.AddHero(nameBox.Text, damageBox.Text, critChanceBox.Text, critPowerBox.Text, dodgeChanceBox.Text, armorBox.Text, hpBox.Text, imgBox.Text);
             this.Close();
         }
 
@@ -47,6 +47,11 @@ namespace Game.ProjectWindows
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             _service.CheckData(saveBtn, mainGrid);
+        }
+
+        private void addPhoto(object sender, RoutedEventArgs e)
+        {
+            addImg.Source = (ImageSource)new ImageSourceConverter().ConvertFrom(imgBox.Text);
         }
     }
 }

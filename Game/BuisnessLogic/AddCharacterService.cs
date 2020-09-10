@@ -20,7 +20,7 @@ namespace Game.BuisnessLogic
             _repository = repository;
         }
 
-        public async Task AddHero(string name, string damage, string critChance, string critPower, string dodge, string armor, string hp)
+        public async Task AddHero(string name, string damage, string critChance, string critPower, string dodge, string armor, string hp, string imgUrl)
         {
             await _repository.CreateAsync(new Hero()
             {
@@ -30,7 +30,8 @@ namespace Game.BuisnessLogic
                 CritPower = Convert.ToDouble(critPower),
                 Vortex = Convert.ToDouble(dodge),
                 Protection = Convert.ToDouble(armor),
-                Hp = Convert.ToDouble(hp)
+                Hp = Convert.ToDouble(hp),
+                ImageURL = imgUrl
             });
         }
         public async Task<bool> Validation(string text)

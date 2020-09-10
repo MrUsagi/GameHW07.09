@@ -15,6 +15,7 @@ namespace Game.DataLayer.Models
         public double CritPower { get; set; }
         public double Vortex { get; set; }
         public double Hp { get; set; }
+        public string ImageURL { get; set; }
         public double Protection { get; set; }
     }
 }
