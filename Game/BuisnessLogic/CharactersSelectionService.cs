@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Game.BuisnessLogic
 {
@@ -22,17 +24,18 @@ namespace Game.BuisnessLogic
         {
             mainPanel.Children.Clear();
             var collection = await _repository.GetAllAsync();
-            foreach(var item in collection)
+            foreach (var item in collection)
             {
                 mainPanel.Children.Add(
                     new Button()
                     {
                         Width = 300,
                         Height = 300,
-                        Content = item.Name,
+                        Content = new Image() { Source = (ImageSource)new ImageSourceConverter().ConvertFrom(item.ImageURL) },
+
                     });
             }
-            
+
         }
 
         public async Task<Hero> PickHero(object content)
