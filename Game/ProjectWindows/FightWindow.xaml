@@ -8,8 +8,8 @@
         Title="FifghtWindow" Height="500" Width="1000">
     <Grid>
         <Image Source="https://chto-eto-takoe.ru/uryaimg/f4842dcb685d490e2a43212b8072a6fe.png" Margin="388,8,388,197"></Image>
-        <Image x:Name="Player1Img"  Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg" Margin="0,-4,641,224"></Image>
-        <Image x:Name="Player2Img" Source="https://pw.artfile.me/wallpaper/13-09-2017/650x366/anime-one-punch-man-sajtama-1228784.jpg" Margin="641,-4,0,224"></Image>
+        <Image x:Name="Player1Img"   Margin="0,-4,641,224"></Image>
+        <Image x:Name="Player2Img"  Margin="641,-4,0,224"></Image>
         <Label Name="Hero1HpLb" Margin="359,223,505,215"></Label>
         <ScrollViewer x:Name="ScrollViewer" Margin="0,263,0,63">
             <TextBlock Name="BattleLogTb"  Foreground="#FF008106"> Fight started:</TextBlock>
@@ -17,6 +17,8 @@
         <Button Margin="320,417,320,0" Name="NextTurnBtn" Click="NextTurnBtn_Click" >Next turn</Button>
         <ProgressBar x:Name="Hero1Pb" Margin="0,226,641,215" Foreground="#FFDE0619"></ProgressBar>
         <ProgressBar x:Name="Hero2Pb" Margin="641,226,0,215" Foreground="#FFDE0619"/>
-        <Label x:Name="Hero2HpLb" Margin="495,222,359,215"></Label>
+        <Label HorizontalAlignment="Right" x:Name="Hero2HpLb" Margin="495,222,359,215"></Label>
+        <Label x:Name="Hero1Name" Margin="359,174,505,244" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="Hero2Name" Margin="0,174,359,244" HorizontalAlignment="Right" FontSize="14" FontWeight="Bold"/>
     </Grid>
 </Window>

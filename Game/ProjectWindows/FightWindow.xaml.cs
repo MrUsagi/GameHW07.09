@@ -21,12 +21,6 @@ namespace Game.ProjectWindows
     public partial class FightWindow : Window
     {
         public bool switcher { get; set; }
-        //Hero firstHero = new Hero()
-        //{ BasicDamage = 10, CritChance = 25, CritPower = 110, Hp = 150, Name = "Gayman", Protection = 35, Vortex = 10 };//Test heroes
-        //                                                                                                                // ЭТО НАДО УДАЛИТЬ!!! yt afrn
-        //Hero secondHero = new Hero()
-        //{ BasicDamage = 15, CritChance = 50, CritPower = 230, Hp = 80, Name = "Vovaman", Protection = 10, Vortex = 25 };//Test heroes
-
         public FightWindow()
         {
             InitializeComponent();
@@ -37,11 +31,23 @@ namespace Game.ProjectWindows
             player.SoundLocation = @"../Resources/Mortal Kombat.wav";
             player.Play();
 
+            Player1Img.Source = new BitmapImage(new Uri(BattleClass.Attacker.ImageURL, UriKind.RelativeOrAbsolute));
+            Player2Img.Source = new BitmapImage(new Uri(BattleClass.Defender.ImageURL, UriKind.RelativeOrAbsolute));
+            Hero1Name.Content = BattleClass.Attacker.Name;
+            Hero2Name.Content = BattleClass.Defender.Name;
 
+
+            
         }
 
         private void NextTurnBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (BattleClass.Attacker.Hp < 0 || BattleClass.Defender.Hp < 0)
+            {
+                NextTurnBtn.IsEnabled = false;
+                return;
+            }
+
             BattleClass battleClass = new BattleClass();
             BattleLogTb.Text += battleClass.BattleFunction();
             Hero1HpLb.Content = Math.Round(BattleClass.Attacker.Hp, MidpointRounding.ToEven);
